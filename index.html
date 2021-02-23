@@ -144,6 +144,96 @@
     
     
     <article
+  id="post-2021MCM Study Share"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/02/23/2021MCM%20Study%20Share/"
+    >2021美赛学习总结</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/02/23/2021MCM%20Study%20Share/" class="article-date">
+  <time datetime="2021-02-22T16:00:00.000Z" itemprop="datePublished">2021-02-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%88%86%E4%BA%AB/">分享</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="2021美赛学习总结"><a href="#2021美赛学习总结" class="headerlink" title="2021美赛学习总结"></a>2021美赛学习总结</h1><p><font color=#999AAA >包括了gephi软件使用，数据分析软件Mpai使用，美赛资料分享<br>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
+</font>
+
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+<h1 id="1-Gephi"><a href="#1-Gephi" class="headerlink" title="1.Gephi"></a>1.Gephi</h1><h2 id="1-1-Gephi是什么"><a href="#1-1-Gephi是什么" class="headerlink" title="1.1 Gephi是什么"></a>1.1 Gephi是什么</h2><p>  Gephi是一款开源免费跨平台基于JVM的复杂网络分析软件,，其主要用于各种网络和复杂系统，动态和分层图的交互可视化与探测开源工具<br>  <img src="https://img-blog.csdnimg.cn/20210223155118758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://gephi.org/">这是Gephi的官网可以点进去了解一下</a></p>
+</blockquote>
+<p>简单来说，就是可以通过这个软件进行数据可视化，画出知识图谱、数据网络，可供相关技术人员学习和分析</p>
+<h2 id="1-2-Gephi下载及安装"><a href="#1-2-Gephi下载及安装" class="headerlink" title="1.2 Gephi下载及安装"></a>1.2 Gephi下载及安装</h2><p>可以参考中科院的课程讲座，包括了Gephi的应用、软件的安装、功能及操作、可视化、指标计算以及软件相关的资源介绍等内容</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://il.las.ac.cn/course/detail?id=bcfa3170e0c12cdec118b7b0d1f8385e">Gephi 网络数据可视化</a></p>
+</blockquote>
+<p>视频中的老师给出了详细的安装步骤，跟着视频就行了，当然后续的学习也可以参照老师，但我个人认为老师讲的不够清晰清楚，她把软件各个区间的内容都讲得十分清楚，例子也给了一个，只能当作了解性学习，针对具体问题还是得具体操作更有助于学习了解</p>
+<h2 id="1-3-Gephi具体使用"><a href="#1-3-Gephi具体使用" class="headerlink" title="1.3 Gephi具体使用"></a>1.3 Gephi具体使用</h2><p><font color=#999AAA >这里我以2021美赛D题的第一问艺术家影响力为例，构建了影响力网络</p>
+<h3 id="1-数据导入"><a href="#1-数据导入" class="headerlink" title="(1)数据导入"></a>(1)数据导入</h3><p>利用Excel构建点表格，表格建议保存为node.csv的格式才方便导入到gephi中，id为图谱点的编号，label为图谱点的名字，每个点对应一个编号，在后面的边表格中也需要一一对应<br><img src="https://img-blog.csdnimg.cn/20210223154330886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>利用Excel构建边表格，同样保存为edge.csv的文件格式，source为连出点的id，target为连入点的id，后面的type、id等可写可不写，当需要时可以加上，要注意的是这里的id需要对应点表格中的id<br><img src="https://img-blog.csdnimg.cn/20210223164004717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后开始导入数据，首先输入节点表格<br><img src="https://img-blog.csdnimg.cn/20210223164655360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223164824845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223164917325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70"></p>
+<p>接着，我们导入边表格，要注意的是在同一工作区内进行导入</p>
+<p><img src="https://img-blog.csdnimg.cn/20210223165109566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223165146621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="（2）图形概览"><a href="#（2）图形概览" class="headerlink" title="（2）图形概览"></a>（2）图形概览</h3><p><img src="https://img-blog.csdnimg.cn/20210223165307784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后运行下列选项，具体用处可以参考官方文章</p>
+<p><img src="https://img-blog.csdnimg.cn/20210223165526524.png" alt="在这里插入图片描述"><br>紧接着，我们可以开始自定义点和边的颜色大小等参数了，我这里给出一个示例<br><img src="https://img-blog.csdnimg.cn/20210223165936427.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223170135369.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223170209793.png" alt="在这里插入图片描述"><br>最后选择一种图样，运行之后就会出现网络了<br><img src="https://img-blog.csdnimg.cn/20210223170346866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223170424275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后还可以调整边的大小、颜色，显示标签等等内容<br><img src="https://img-blog.csdnimg.cn/20210223170502889.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223170538774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="（3）图形预览导出"><a href="#（3）图形预览导出" class="headerlink" title="（3）图形预览导出"></a>（3）图形预览导出</h3><p>最后在预览区，还可以对你的图形进行更完善的调整，使你的图形更加好看</p>
+<h1 id="2-MPai数据科学平台"><a href="#2-MPai数据科学平台" class="headerlink" title="2.MPai数据科学平台"></a>2.MPai数据科学平台</h1><h2 id="2-1-MPai是什么"><a href="#2-1-MPai是什么" class="headerlink" title="2.1 MPai是什么"></a>2.1 MPai是什么</h2><p>MPai数据科学平台也是我们这次美赛发现的一个超级好用的软件，提供了一个很好的平台给我们进行数据分析，里面具备了大量的算法和模型，你只需要将数据导入到平台上，然后选择对应的算法或者模型，它给出相应的分析。同样可以到官网进行了解<br><img src="https://img-blog.csdnimg.cn/20210223172102446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.mpaidata.com/">MPai数据科学平台</a></p>
+</blockquote>
+<h2 id="2-1-MPai具体使用"><a href="#2-1-MPai具体使用" class="headerlink" title="2.1 MPai具体使用"></a>2.1 MPai具体使用</h2><p><font color=#999AAA >这里同样以2021美赛D题的数据为例，进行分析处理</p>
+<p>下载安装完成，登录之后，创建工程，然后就是导入准备好的数据<br><img src="https://img-blog.csdnimg.cn/20210223172731962.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223172800140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>导入成功后，右键打开<br><img src="https://img-blog.csdnimg.cn/20210223175818265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223175857450.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接着，就可以选择想要应用的算法或者模型，这里我选择了LightGBM分类<br><img src="https://img-blog.csdnimg.cn/20210223180016892.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>调好相应的参数之后，点击分析就行了，然后查看分析结果，也可以得到各种分析性数据<br><img src="https://img-blog.csdnimg.cn/20210223180213841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="3-补充"><a href="#3-补充" class="headerlink" title="3.补充"></a>3.补充</h1><h2 id="3-1相似度"><a href="#3-1相似度" class="headerlink" title="3.1相似度"></a>3.1相似度</h2><p>在考虑音乐相似性的时候，我们用到了相似性度量，可以参考网上或者论文的相似性度量文章</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39050022/article/details/80732249">几种相似度算法分析</a></p>
+</blockquote>
+<h2 id="3-2分享"><a href="#3-2分享" class="headerlink" title="3.2分享"></a>3.2分享</h2><p>因为准备美赛数模，我提前收集了很多算法模型的资料学习，还有对应的论文之类的文件，如果需要的话可以私信我，网盘分享给大家<br><img src="https://img-blog.csdnimg.cn/20210223181040441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210223181117332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210223181143185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk3Mjc4NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-About Me"
   class="article article-type-post"
   itemscope
@@ -174,7 +264,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="姓名：郑俊宇"><a href="#姓名：郑俊宇" class="headerlink" title="姓名：郑俊宇"></a>姓名：郑俊宇</h1><h1 id="职业：学生，就读于中山大学"><a href="#职业：学生，就读于中山大学" class="headerlink" title="职业：学生，就读于中山大学"></a>职业：学生，就读于中山大学</h1><h1 id="邮箱：-49-x30-x37-x34-51-x35-48-x36-x33-48-64-113-x71-46-x63-111-109"><a href="#邮箱：-49-x30-x37-x34-51-x35-48-x36-x33-48-64-113-x71-46-x63-111-109" class="headerlink" title="邮箱：&#49;&#x30;&#x37;&#x34;&#51;&#x35;&#48;&#x36;&#x33;&#48;&#64;&#113;&#x71;&#46;&#x63;&#111;&#109;"></a>邮箱：<a href="mailto:&#49;&#x30;&#x37;&#x34;&#51;&#x35;&#48;&#x36;&#x33;&#48;&#64;&#113;&#x71;&#46;&#x63;&#111;&#109;">&#49;&#x30;&#x37;&#x34;&#51;&#x35;&#48;&#x36;&#x33;&#48;&#64;&#113;&#x71;&#46;&#x63;&#111;&#109;</a></h1><h1 id="微信：13630013976"><a href="#微信：13630013976" class="headerlink" title="微信：13630013976"></a>微信：13630013976</h1><h1 id="QQ：1074350630"><a href="#QQ：1074350630" class="headerlink" title="QQ：1074350630"></a>QQ：1074350630</h1> 
+  <h1 id="姓名：郑俊宇"><a href="#姓名：郑俊宇" class="headerlink" title="姓名：郑俊宇"></a>姓名：郑俊宇</h1><h1 id="职业：学生，就读于中山大学数学系-珠海"><a href="#职业：学生，就读于中山大学数学系-珠海" class="headerlink" title="职业：学生，就读于中山大学数学系(珠海)"></a>职业：学生，就读于中山大学数学系(珠海)</h1><h1 id="邮箱：-x31-x30-55-52-51-x35-x30-x36-51-x30-x40-x71-x71-x2e-x63-111-x6d"><a href="#邮箱：-x31-x30-55-52-51-x35-x30-x36-51-x30-x40-x71-x71-x2e-x63-111-x6d" class="headerlink" title="邮箱：&#x31;&#x30;&#55;&#52;&#51;&#x35;&#x30;&#x36;&#51;&#x30;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;"></a>邮箱：<a href="mailto:&#x31;&#x30;&#55;&#52;&#51;&#x35;&#x30;&#x36;&#51;&#x30;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#x31;&#x30;&#55;&#52;&#51;&#x35;&#x30;&#x36;&#51;&#x30;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;</a></h1><h1 id="微信：13630013976"><a href="#微信：13630013976" class="headerlink" title="微信：13630013976"></a>微信：13630013976</h1><h1 id="QQ：1074350630"><a href="#QQ：1074350630" class="headerlink" title="QQ：1074350630"></a>QQ：1074350630</h1> 
       <!-- reward -->
       
     </div>
@@ -207,7 +297,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020
+        2020-2021
         <i class="ri-heart-fill heart_icon"></i> SharkJiy
       </li>
     </ul>
